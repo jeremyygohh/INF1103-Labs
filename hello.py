@@ -1,8 +1,8 @@
 ###### Activity 1 ######
-print("==============================")
-print("Welcome here")
-print("My first post!")
-print("==============================")
+# print("==============================")
+# print("Welcome here")
+# print("My first post!")
+# print("==============================")
 
 ###### Activity 2 ######
 # username = "cool_creator"
@@ -10,15 +10,15 @@ print("==============================")
 # followers = 100
 
 ###### Activity 4 ######
-username = input("Enter Username: ")
-age = input("Enter Age: ")
-category = input("Enter Content Category: ")
+# username = input("Enter Username: ")
+# age = input("Enter Age: ")
+# category = input("Enter Content Category: ")
 
-print("\nInstagram Profile")
-print("==================")
-print("Username:", username)
-print("Age:", age)
-print("Category:", category)
+# print("\nInstagram Profile")
+# print("==================")
+# print("Username:", username)
+# print("Age:", age)
+# print("Category:", category)
 
 
 ###### Activity 3 ######
@@ -35,3 +35,17 @@ print("Category:", category)
 # print("Username:", username)
 # print("Bio:", bio)
 # print("Followers:", followers)
+
+###### Activity 5 ######
+username = input("Enter Username: ")
+age = int(input("Enter Age: "))
+category = input("Enter Content Category: ")
+
+print("\nInstagram Profile")
+print("==================")
+print("Username:", username)
+print("Age:", age)
+print("Category:", category)
+
+if age>40 and category == "fun":
+    print("You are old what is fun for you??")
