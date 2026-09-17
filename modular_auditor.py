@@ -1,28 +1,23 @@
 inventory = 0
 failed_entries = 0
 
-while True:
-    stock = input("Enter stock quantity: ")
+def get_valid_input():
+    while True:
+        stock = input("Enter stock quantity: ")
 
-    if stock == "quit":
-        break
+        if stock == "quit":
+            return stock
 
-    elif stock.startswith("-"):
-        print("Negative numbers are not allowed")
-        failed_entries += 1
-        continue
+        elif stock.startswith("-"):
+            print("Negative numbers are not allowed")
+            continue
 
-    elif not stock.isdigit():
-        print("Invalid input")
-        failed_entries += 1
-        continue
+        elif not stock.isdigit():
+            print("Invalid input")
+            continue
 
-    stock = int(stock)
-    inventory += stock
+        stock = int(stock)
+        return stock
 
-    if inventory > 500:
-        print("Inventory Exceeded")
-        break
-
-print("Total Units Processed:", inventory)
-print("Number of Failed/Rejected Entries:", failed_entries)
+def process_delivery(current_total, new_value):
+    new_total = current_total + new_value
