@@ -24,8 +24,7 @@ def get_valid_input():
         return stock, failed
     
 def process_delivery(current_total, new_value):
-    new_total = current_total + new_value
-    return new_total
+    return current_total + new_value
 
 def calculate_tax(amount):
     tax = amount * 0.10
