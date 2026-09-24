@@ -55,8 +55,16 @@ def load_inventory():
 
 inventory, history = load_inventory()
 
-print("Loaded inventory:", inventory)
-print("Loaded history:", history)
+print("Current Inventory:", inventory)
+print("Transaction History:", history)
+
+def save_inventory(inventory, history):
+    with open("inventory.txt", "w") as file:
+        file.write(str(inventory) + "\n")
+
+        for transaction in history:
+            file.write(str(transaction) + "\n")
+    print("Inventory successfully saved to inventory.txt")
 
 while True:
     stock, failed = get_valid_input()
@@ -70,5 +78,6 @@ while True:
     tax = calculate_tax(stock)
     deliveries_processed += 1
 
+save_inventory(inventory, history)
 print("Transaction History:", history)
 generate_report(deliveries_processed, failed_entries)
