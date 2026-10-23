@@ -34,5 +34,11 @@
         "name": "Charger",
         "price": 25.8,
         "stock": 25
+    },
+    {
+        "id": "P007",
+        "name": "Headphones",
+        "price": 60.0,
+        "stock": 30
     }
 ]
