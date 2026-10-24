@@ -52,6 +52,9 @@ def add_product():
     print("Add New Product")
 
     product_id = input("Enter Product ID: ")
+    if inventory.search_product(product_id) is not None:
+        print("Product ID already exists!")
+        return
     name = input("Product Name: ")
     price = float(input("Price: "))
     stock = int(input("Stock Quantity: "))
