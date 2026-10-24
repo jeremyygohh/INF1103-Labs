@@ -22,3 +22,6 @@ class Inventory:
         for product in self.__products:
             product.display_information()
             print("------------------------------------------------")
+
+    def get_products(self):
+        return self.__products.copy()

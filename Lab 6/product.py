@@ -5,3 +5,23 @@ class Product:
         self.__price = price
         self.__stock = stock
 
+    def update_stock(self, quantity):
+        if quantity >= 0:
+            self.__stock = quantity
+
+    def display_information(self):
+        print(f"Product ID: {self.__product_id}")
+        print(f"Name: {self.__name}")
+        print(f"Price: ${self.__price:.2f}")
+        print(f"Stock: {self.__stock}")
+
+    def get_product_id(self):
+        return self.__product_id
+
+    def to_dict(self):
+        return {
+            "id": self.__product_id,
+            "name": self.__name,
+            "price": self.__price,
+            "stock": self.__stock
+        }
