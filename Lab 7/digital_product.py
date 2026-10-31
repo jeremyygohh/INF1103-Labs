@@ -18,8 +18,3 @@ class DigitalProduct(Product):
         data["download_size"] = self.__download_size
         return data
 
-if __name__ == "__main__":
-    game = DigitalProduct("D001", "Minecraft", 50, 10, 500)
-    game.display_information()
-    print(game.get_fulfilment_info())
-    print(game.to_dict())

@@ -22,13 +22,3 @@ class PhysicalProduct(Product, CanBeShipped):
         data["weight"] = self.__weight
         return data
 
-if __name__ == "__main__":
-    laptop = PhysicalProduct("P001", "Laptop", 1000, 5, 2)
-    laptop.display_information()
-    print(laptop.get_fulfilment_info())
-    print(f"Shipping Cost: ${laptop.calculate_shipping_cost():.2f}")
-    print(laptop.to_dict())
-    # keyboard = PhysicalProduct("P002", "Keyboard", 80, 10, 0.5)
-    # keyboard.display_information()
-    # print(keyboard.get_fulfilment_info())
-    # print(f"Keyboard Shipping Cost: ${keyboard.calculate_shipping_cost():.2f}")
