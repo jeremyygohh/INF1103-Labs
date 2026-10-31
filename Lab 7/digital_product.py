@@ -12,7 +12,14 @@ class DigitalProduct(Product):
     def get_fulfilment_info(self):
             return "This product is delivered digitally."
 
+    def to_dict(self):
+        data = super().to_dict()
+        data["type"] = "digital"
+        data["download_size"] = self.__download_size
+        return data
+
 if __name__ == "__main__":
     game = DigitalProduct("D001", "Minecraft", 50, 10, 500)
     game.display_information()
     print(game.get_fulfilment_info())
+    print(game.to_dict())
