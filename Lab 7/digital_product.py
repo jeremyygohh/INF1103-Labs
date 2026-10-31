@@ -9,6 +9,10 @@ class DigitalProduct(Product):
         super().display_information()
         print(f"Download Size: {self.__download_size} MB")
 
+    def get_fulfilment_info(self):
+            return "This product is delivered digitally."
+
 if __name__ == "__main__":
     game = DigitalProduct("D001", "Minecraft", 50, 10, 500)
     game.display_information()
+    print(game.get_fulfilment_info())
