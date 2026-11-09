@@ -36,6 +36,9 @@ class Product(ABC):
             "supplier": self.__supplier.to_dict()
         }
 
+    def get_price(self) -> float:
+        return self.__price
+
     @abstractmethod
     def get_fulfilment_info(self):
         pass
