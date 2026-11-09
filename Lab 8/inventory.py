@@ -29,7 +29,7 @@ class Inventory:
     def search_product(self, product_id: str) -> Product | None:
         return self.find_product(product_id)
 
-    def display_all(self):
+    def display_all(self) -> None:
         print("Current Inventory")
         print("------------------------------------------------")
 
@@ -41,5 +41,5 @@ class Inventory:
             product.display_information()
             print("------------------------------------------------")
 
-    def get_products(self):
+    def get_products(self) -> list[Product]:
         return self.__products.copy()
