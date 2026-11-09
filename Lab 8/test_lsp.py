@@ -46,3 +46,13 @@ software.update_stock(20)
 
 print("\n--- After Stock Update ---")
 inventory.display_all()
+
+
+# Section 7 - Polymorphism Test
+
+print("\n--- Polymorphism Test ---")
+
+for product in inventory.get_products():
+    product.display_information()
+    print(product.get_fulfilment_info())
+    print("-" * 40)
