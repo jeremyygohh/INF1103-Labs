@@ -13,20 +13,6 @@ class NoDiscount(DiscountStrategy):
         return total
 
 
-from abc import ABC, abstractmethod
-
-
-class DiscountStrategy(ABC):
-    @abstractmethod
-    def apply(self, total: float) -> float:
-        pass
-
-
-class NoDiscount(DiscountStrategy):
-    def apply(self, total: float) -> float:
-        return total
-
-
 class PercentageDiscount(DiscountStrategy):
     def __init__(self, percentage: float) -> None:
         self.percentage = percentage
