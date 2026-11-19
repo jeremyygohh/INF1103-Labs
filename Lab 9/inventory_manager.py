@@ -99,7 +99,7 @@ def add_product():
         return
 
     name = input("Product Name: ")
-    price = float(input("Price: "))
+    price = get_positive_float("Enter price: ")
     stock = int(input("Stock Quantity: "))
 
     print("Enter Supplier Information")
@@ -181,6 +181,21 @@ def search_product():
         print("------------------------------------------------")
     else:
         print("Product not found.")
+
+
+def get_positive_float(prompt: str) -> float:
+    while True:
+        try:
+            value = float(input(prompt))
+
+            if value <= 0:
+                print("Please enter a number greater than zero.")
+                continue
+
+            return value
+
+        except ValueError:
+            print("Please enter a valid number, e.g. 12.50")
 
 
 def display_menu():
